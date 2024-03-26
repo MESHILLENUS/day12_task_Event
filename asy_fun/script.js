@@ -41,7 +41,7 @@ function higherOderFunc(fn) {
   }
   //call back Hell (inversion of control) pyramid of DOOM
   function guviEnrollment() {
-    courseSelection(() => {
+     courseSelection(() => {
       studentEnrollment(() => {
         paymentProcess(() => {
           accessToCourse(() => {
