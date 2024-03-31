@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+  }
+  tr:nth-child(even) {
+    background-color: #d6eeee;
+    border-radius: 5px;
+  }
+  
+  fieldset {
+    max-width: 1024px;
+    margin: 5rem auto;
+  }
+  label {
+    font-weight: bold;
+  }
+  
+  .nameInputs {
+    margin-bottom: 1rem;
+  }
+  .input1 {
+    position: relative;
+  }
+  .input2 {
+    position: relative;
+  }
+  .textInput1 + .input1::after {
+    content: "First";
+    display: block;
+    top: 1.5rem;
+    left: -10rem;
+    position: absolute;
+    color: gray;
+  }
+  .textInput2 + .input2::after {
+    content: "Last";
+    display: block;
+    top: 1.5rem;
+    left: -10rem;
+    position: absolute;
+    color: gray;
+  }
+  
+  #fName + span {
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  #email {
+    margin-bottom: 1rem;
+  }
+  span {
+    color: red;
+  }
+  
+  #experience{
+    cursor: pointer;
+  }
+  
+  table {
+    border: 1px solid black;
+    margin-bottom: 1rem;
+  }
+  #th1 {
+    padding-bottom: 2.5rem;
+  }
+  #th2 {
+    padding-bottom: 2.5rem;
+  }
+  td {
+    width: 150px;
+    padding: 5px;
+  }
+  td:not(:first-child) {
+    text-align: center;
+  }
+  
+  textarea {
+    width: 100%;
+  }
+  
+  .btn-submit {
+    padding: 5px;
+    border: none;
+    margin: 5px 0 5px 45%;
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 600px) {
+    form {
+      font-size: 0.8rem;
+    }
+    #fName + span {
+      margin-right: 0.5rem;
+    }
+    table {
+      margin-inline: auto;
+      margin-bottom: 1rem;
+      height: auto;
+    }
+    td {
+      width: fit-content;
+      padding: 1px;
+    }
+    fieldset {
+      margin: 3rem auto;
+    }
+    .textInput1 + .input1::after, .textInput2 + .input2::after{
+      display: none;
+    }
+  }
