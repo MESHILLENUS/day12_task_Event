@@ -1,5 +1,6 @@
 const API = "https://6604dda22ca9478ea17ea24d.mockapi.io/users";
 const user_container = document.querySelector(".user-container");
+const user_form = document.querySelector(".user-form");
 //API Request Handlers to Handle CRUD OPERATION
 //API HANDLERS
 //GET - (READ)
@@ -47,10 +48,19 @@ async function deleteUser(id) {
   const data = await res.json();
   console.log(data);
 }
-
+user_form.innerHTML +=`
+<form>
+            <h2>
+                user management
+            </h2>
+            <input type="text" required value="" placeholder="Enter Your Name" class="input-text" id="input-name"/>
+            <input type="text" required value="" placeholder="Enter Your Name" class="input-text" id="input-name"/>
+            <input type="text" required value="" placeholder="Enter Your Name" class="input-text" id="input-name"/>
+        </form>`;
 //Dom Handling
 function createUserCard(user) {
-  const card = document.createElement("div", { class: "card" });
+  const card = document.createElement("div");
+  card.setAttribute("class","card");
   card.innerHTML += `
 <h1>${user.name}</h2>
 <p>Batch <span>${user.batch}</span></p>
